@@ -7,7 +7,10 @@
 //--------------------------------------------------------------------------------------------
 
 module hdl_top;
-
+  //-------------------------------------------------------
+  // Package : Importing Uvm Pakckage and Test Package
+  //-------------------------------------------------------
+  import axi4_test_pkg::*;
   import uvm_pkg::*;
   import axi4_globals_pkg::*;
   `include "uvm_macros.svh"
@@ -66,7 +69,20 @@ module hdl_top;
       defparam axi4_slave_agent_bfm[i].axi4_slave_agent_bfm_h.SLAVE_ID = i;
     end
   endgenerate
-  
+
+
+  //-------------------------------------------------------
+  // run_test for simulation
+  //-------------------------------------------------------
+  initial begin : START_TEST 
+    
+    // The test to start is given at the command line
+    // The command-line UVM_TESTNAME takes the precedance
+    run_test("axi4_base_test");
+
+  end
+
+
 endmodule : hdl_top
 
 `endif

@@ -26,6 +26,5 @@
 ../../agent/slave_agent_bfm/axi4_slave_monitor_bfm.sv
 ../../agent/slave_agent_bfm/axi4_slave_agent_bfm.sv
 ../../top/hdl_top.sv
-../../top/hvl_top.sv
 ../../assertions/master_assertions.sv
 ../../assertions/slave_assertions.sv
